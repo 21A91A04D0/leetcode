@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void unique_subsets(int ind, vector<int> &ds, vector<vector<int>> &ans, vector<int> &nums) {
+    void unique_subsets(int ind, vector<int> ds, vector<vector<int>> &ans, vector<int> &nums) {
         ans.push_back(ds);
         for(int i = ind ; i < nums.size() ; i++) {
             if(i != ind and nums[i] == nums[i-1]) continue;
