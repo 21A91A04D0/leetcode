@@ -9,13 +9,15 @@ public:
         vector<int> a = {-1, 0, 1};
         for(auto q : a) {
             for(auto w : a) {
-                res = max(res, grid(i + 1, j + q, i1 + 1, j1 + w, mat, m, n));
+                if(j == j1){
+                    res = max(res,mat[i][j] + grid(i + 1, j + q, i1 + 1, j1 + w, mat, m, n));
+                }
+                else{
+                    res = max(res,mat[i][j] + mat[i1][j1] + grid(i + 1, j + q, i1 + 1, j1 + w, mat, m, n));
+                }
+                
             }
         }
-        if(j == j1) {
-            res += mat[i][j];
-        }
-        else res += mat[i][j] + mat[i1][j1];
         return dp[i][j][j1] = res;
     }
     int cherryPickup(vector<vector<int>>& gride) {
