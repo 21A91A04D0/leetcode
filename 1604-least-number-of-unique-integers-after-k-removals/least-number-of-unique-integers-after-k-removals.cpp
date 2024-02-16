@@ -1,6 +1,7 @@
 class Solution {
 public:
     int findLeastNumOfUniqueInts(vector<int>& arr, int k) {
+        ios_base::sync_with_stdio(false);cin.tie(NULL);
         map<int, int> mp;
         for(auto it : arr) {
             mp[it]++;
