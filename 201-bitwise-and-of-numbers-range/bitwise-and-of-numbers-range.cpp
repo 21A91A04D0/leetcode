@@ -19,8 +19,7 @@ public:
             high = low << 1;
         }
         int res = left;
-        cout << low << " " << high;
-        if(left >= low and right <= high) {
+        if(right <= high) {
             int i = left;
             while(i <= right) {
                 if(i < 2147483647) {
