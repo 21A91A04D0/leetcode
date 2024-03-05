@@ -10,7 +10,7 @@ public:
                 while(s[i] == ch and i <= j) {
                     i++;
                 }
-                while(s[j] == ch and i < j) {
+                while(s[j] == ch and i <= j) {
                     j--;
                 }
             }
