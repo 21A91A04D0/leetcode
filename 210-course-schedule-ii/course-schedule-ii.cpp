@@ -25,7 +25,7 @@ public:
     vector<int> findOrder(int V, vector<vector<int>>& prerequisites) {
         vector<int> adj[V];
         for(auto it : prerequisites) {
-            adj[it[0]].push_back(it[1]);
+            adj[it[1]].push_back(it[0]);
         }
         vector<int> vis(V, 0);
         vector<int> pathVis(V, 0);
@@ -46,7 +46,7 @@ public:
                     dfs_topo(i, adj, visited);
                 }
             }
-            // reverse(ans.begin(), ans.end());
+            reverse(ans.begin(), ans.end());
             return ans;
         }
     }
