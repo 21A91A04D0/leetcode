@@ -10,10 +10,7 @@ public:
             mt[it]++;
         }
         map<char, char> mp;
-        if(s == t) return 1;
-        if(s.size() != t.size() || mt.size() != ms.size()) return false;
         for(int i = 0 ; i < s.size() ; i++) {
-            
             if(ms[s[i]] != mt[t[i]]) return 0;
             else {
                 if(mp.find(s[i]) == mp.end()) {
