@@ -14,12 +14,13 @@ public:
     int ans = 0;
     void fun(TreeNode* root, int temp) {
         if(root == nullptr) return;
+        temp = temp * 10 + root->val;
         if(root->left == NULL and root->right == NULL) {
-            temp = temp * 10 + root->val;
+            // temp = temp * 10 + root->val;
             ans += temp;
             return;
         }
-        temp = temp * 10 + root->val;
+        
         
         fun(root->left, temp);
         fun(root->right, temp);
