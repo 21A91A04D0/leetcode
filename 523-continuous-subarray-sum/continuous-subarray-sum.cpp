@@ -1,9 +1,6 @@
 class Solution {
 public:
     bool checkSubarraySum(vector<int>& nums, int k) {
-        for(int i = 0; i < nums.size(); i++) {
-            nums[i] = nums[i] % k;
-        }
         map<int, int> mp;
         int prefix = 0;
         mp[0] = -1;
