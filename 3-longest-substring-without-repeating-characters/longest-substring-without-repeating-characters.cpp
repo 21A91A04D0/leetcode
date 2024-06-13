@@ -18,7 +18,7 @@ public:
             mp[s[right]] = right;
             right++;
         }   
-        maxLen = max(maxLen, right - left);
+        
         return maxLen;
     }
 };
