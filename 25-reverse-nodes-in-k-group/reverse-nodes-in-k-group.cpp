@@ -10,14 +10,6 @@
  */
 class Solution {
 public:
-    int get_length(ListNode *head) {
-        int cnt = 0;
-        while(head) {
-            head = head->next;
-            cnt++;
-        }
-        return cnt;
-    }
     ListNode *reverseList(ListNode *temp1) {
         ListNode *prev = nullptr, *front;
         while(temp1) {
@@ -28,11 +20,10 @@ public:
         }
         return prev;
     }
-    void insertAtEnd(ListNode *pot) {
-        while(pot->next) {
-            pot = pot->next;
+    void insertAtEnd(ListNode *&res) {
+        while(res->next) {
+            res = res->next;
         }
-        
     }
     ListNode* reverseKGroup(ListNode* head, int k) {
         if(head == NULL || head->next == NULL) return head;
@@ -53,9 +44,7 @@ public:
             }
             
             else head = head->next;
-            while(res->next) {
-                res = res->next;
-            }
+            insertAtEnd(res);
         }
         if(front != NULL) {
             res->next = front;
