@@ -19,11 +19,11 @@ public:
             fast = fast->next->next;
 
             if(slow == fast) {
-                while(prev != slow) {
+                while(prev != fast) {
                     prev = prev->next;
-                    slow = slow->next;
+                    fast = fast->next;
                 }
-                return slow;
+                return fast;
             }
             
         }
