@@ -37,8 +37,6 @@ public:
             t = t->next;
         }
         t->next = t1;
-        
-
         return res;
     }
 };
