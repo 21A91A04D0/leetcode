@@ -10,7 +10,6 @@ public:
         }
         if(dp[ind][target] != -1) return dp[ind][target];
         long long pick = 1 + helper(target - coins[ind], ind, coins, dp);
-        if(pick >= INT_MAX) pick = INT_MAX;
         long long notpick = helper(target , ind + 1 , coins, dp);
         return dp[ind][target] = min(pick, notpick);
     }
